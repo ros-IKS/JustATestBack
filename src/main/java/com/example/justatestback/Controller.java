@@ -17,6 +17,7 @@ public class Controller {
 
     @PostMapping("/saveInput")
     public @ResponseBody boolean saveInput(@RequestBody String input){
+        System.out.println(input);
         InputObject inputObject = new InputObject();
         inputObject.setInput(input);
         inputRepository.save(inputObject);
@@ -24,6 +25,7 @@ public class Controller {
     }
     @GetMapping("/fetchInput")
     public @ResponseBody List<InputObject> fetchInput(){
+        System.out.println("Bin bei fetchdata");
         return inputRepository.findAll();
     }
 }
