@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @Transactional
-@CrossOrigin
+@CrossOrigin(originPatterns = "*")
 public class Controller {
 
     @Autowired
